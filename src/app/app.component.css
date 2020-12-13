@@ -1,0 +1,51 @@
+.bg-color {
+  background-color: rgb(26, 31, 34);
+}
+.title {
+  font-size: 2.5rem;
+}
+.group-logo-icon {
+  font-size: 10rem;
+  background-color: whitesmoke;
+  border-radius: 5px;
+}
+.group-logo > img {
+  border-radius: 5px;
+  width: 10rem;
+  height: 10rem;
+}
+.font-white {
+  color: rgb(245, 245, 245);
+}
+.groupInfo {
+  height: 25%;
+  margin: 15% 0px 0 0px;
+}
+.groupInfoInput {
+  height: 30%;
+  margin: 5% 0 0 0;
+}
+.groupInfoInput > input {
+  border: 1px solid whitesmoke;
+  border-radius: 80px;
+  background: rgb(26, 31, 34);
+  padding: 20px;
+  width: 300px;
+  color: whitesmoke;
+}
+input:focus {
+  outline: none;
+}
+.grpImgUploadBtn {
+  display: none;
+}
+.sortButton {
+  float: right;
+  border: 1px solid whitesmoke;
+  background-color: rgb(26, 31, 34);
+  color: whitesmoke;
+  border-radius: 3px;
+}
+.btn{
+  width: 7rem;
+}

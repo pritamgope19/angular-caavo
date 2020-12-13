@@ -1,0 +1,80 @@
+<div class="container-fluid bg-color">
+  <div class="w-100">
+    <div class="m-auto title w-50 text-center font-white">
+      Create Group
+    </div> 
+  </div>
+  <div class="row m-2 ">
+    <div class="col col-sm-3">
+      <div class="card p-2 bg-color">
+        <span *ngIf="!isUploaded" class="group-logo-icon text-center">
+          <i class="fas fa-user"></i>
+        </span>
+        <span *ngIf="isUploaded" class="group-logo text-center">
+          <img [src]="imageUrl" class="image" />
+        </span>
+        <input
+          class="grpImgUploadBtn"
+          #Image
+          type="file"
+          (change)="handleFileInput($event)"
+        />
+
+        <div class="row m-0 text-center font-white">
+          <div class="col p-1">
+            <span (click)="Image.click()"><i class="fas fa-camera"></i></span>
+            <span class="group-logo-text pl-2">Group Logo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col col-sm-3 font-white">
+      <div class="groupInfo">Name</div>
+      <div class="groupInfo">Description</div>
+    </div>
+    <div class="col col-sm-6 ">
+      <div class="groupInfoInput mt-3">
+        <input
+          class="text-center"
+          placeholder="group name"
+          [(ngModel)]="groupDetails.groupName"
+        />
+      </div>
+      <div class="groupInfoInput mt-3">
+        <input
+          class="text-center"
+          placeholder="group description"
+          [(ngModel)]="groupDetails.groupDescription"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button class="sortButton" (click)="sortUserList(!ascen)">
+        Sort by Name
+        <span *ngIf="!ascen" class="pr-1"
+          ><i class="fas fa-long-arrow-alt-up"></i
+        ></span>
+        <span *ngIf="ascen"><i class="fas fa-long-arrow-alt-down"></i></span>
+      </button>
+    </div>
+  </div>
+  <div class="row pt-3 pb-3">
+    <div class="col text-center">
+      <app-user-card [(userList)]="userList"></app-user-card>
+    </div>
+  </div>
+  <div class="row pt-3 pb-3">
+    <div class="col col-sm-6 p-3 text-right">
+      <button class="btn btn-primary" (click)="open()">
+        Update
+      </button>
+    </div>
+    <div class="col col-sm-6 p-3 text-left">
+      <button class="btn btn-danger">
+        Remove
+      </button>
+    </div>
+  </div>
+</div>

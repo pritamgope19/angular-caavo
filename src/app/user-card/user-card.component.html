@@ -1,0 +1,16 @@
+<div class="card p-2 m-1 bg-color" *ngFor="let user of userList">
+  <div (click)="selectUser(user.id)">
+    <div class="group-logo text-center">
+      <img [src]="user.Image" class="image" />
+      <span id="{{user.id}}" class="d-none"
+        ><i class="fas fa-check-square"></i
+      ></span>
+    </div>
+
+    <div class="row m-0 text-center font-white">
+      <div class="col p-1">
+        <span class="group-logo-text pl-2">{{user.name}}</span>
+      </div>
+    </div>
+  </div>
+</div>

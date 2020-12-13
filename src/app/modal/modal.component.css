@@ -1,0 +1,16 @@
+.close {
+  border: none;
+}
+.selectedUser {
+  max-height: 350px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.selectedUser .row {
+  height: 5rem;
+}
+.selectedUser .row >.col> img {
+  height: 3rem;
+  width: 3rem;
+}
+

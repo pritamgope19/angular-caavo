@@ -1,0 +1,17 @@
+.card {
+  width: 11rem;
+  display: inline-flex;
+  margin: auto;
+}
+.group-logo > img {
+  border-radius: 5px;
+  width: 10rem;
+  height: 10rem;
+}
+.selectedUser {
+  color: rgb(20 115 192);
+  font-size: 5rem;
+  position: absolute;
+  top: -30px;
+  right: -3px;
+}
